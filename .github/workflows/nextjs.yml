@@ -52,9 +52,9 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: "20"
-          #cache: 'npm'
-          #cache-dependency-path: /documentation_mdx/documentation_mdx/doc_and_blogs/package-lock.json
-          cache: ${{ steps.detect-package-manager.outputs.manager }}/doc_and_blogs/
+          cache: ${{ steps.detect-package-manager.outputs.manager }}
+          cache-dependency-path: /documentation_mdx/documentation_mdx/doc_and_blogs/package-lock.json
+          
       - name: Setup Pages
         uses: actions/configure-pages@v5
         with:
